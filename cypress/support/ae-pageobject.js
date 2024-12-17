@@ -61,4 +61,26 @@ export const pgObj={
     searchBtn : '#submit_search',
     searchAssert : '.title',
     searchProdtAssert : '.productinfo > p',
+
+    subscripHpemail : '#susbscribe_email',
+    subcriphpArrowbtn : '#subscribe',
+    subcriphpalertmsg : '.alert-success',
+
+    cartBtn :'.shop-menu > .nav > :nth-child(3) > a',
+    cartpgsubcriHeading : 'h2',
+    subCartPgemail : '#susbscribe_email',
+    subcartArrowBtn : '#subscribe',
+    subCartAlertMsg : '.alert',
+
+    addtocartBtnp1 : ':nth-child(3) > .product-image-wrapper > .single-products > .productinfo > .btn',
+    adtctBtn : '.modal-footer > .btn',
+    addtocartBtnp2 : ':nth-child(4) > .product-image-wrapper > .single-products > .productinfo > .btn',
+    atcViewProd : 'u',
+    prod1name : '#product-1 > .cart_description',
+    prod2name : '#product-2 > .cart_description',
+    prod1price : '#product-1 > .cart_price > p',
+    prod2price : '#product-2 > .cart_price > p',
+    prod1quant : '#product-1 > .cart_quantity > .disabled',
+    prod2quant : '#product-2 > .cart_quantity > .disabled',
 }
+

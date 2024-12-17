@@ -93,3 +93,31 @@ export const SearchProduct = ()=>{
         cy.get(pgObj.searchProdtAssert).should('be.visible');
 }
 
+export const SubscriptionHP = ()=>{
+    cy.get(pgObj.subscripHpemail).type('punam@abc.com');
+        cy.get(pgObj.subcriphpArrowbtn).click();
+        cy.get(pgObj.subcriphpalertmsg).should('be.visible');
+}
+
+export const SubcripCartPage = ()=>{
+    cy.get(pgObj.cartBtn).click();
+    cy.get(pgObj.cartpgsubcriHeading).should('be.visible');
+    cy.get(pgObj.subCartPgemail).type('punam@abc.com');
+    cy.get(pgObj.subcartArrowBtn).click();
+    cy.get(pgObj.subCartAlertMsg).should('be.visible');  
+
+}
+
+export const AddToCart = ()=>{
+    cy.get(pgObj.productsBtn).click();
+    cy.get(pgObj.addtocartBtnp1).click();
+    cy.get(pgObj.adtctBtn).click();
+    cy.get(pgObj.addtocartBtnp2).click();
+    cy.get(pgObj.atcViewProd).click();
+    cy.get(pgObj.prod1name).should('contain', 'Blue Top');
+    cy.get(pgObj.prod2name).should('contain', 'Men Tshirt');
+    cy.get(pgObj.prod1price).should('contain','Rs. 500');
+    cy.get(pgObj.prod2price).should('contain','Rs. 400');
+    cy.get(pgObj.prod1quant).should('contain','1');
+    cy.get(pgObj.prod2quant).should('contain','1');
+}  
