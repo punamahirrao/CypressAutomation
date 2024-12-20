@@ -52,6 +52,26 @@ export const LoginUser = ()=>{
         cy.get(pgObj.loginassertion).should('be.visible');
 }
 
+export const RemoveUser = () => {
+    NavigateUrl();
+    cy.get(pgObj.loginbtn).click();
+    cy.get(pgObj.loginemail).type('anna.moray@example.com');
+    cy.get(pgObj.loginpassword).type('anam1234');
+    cy.get(pgObj.loginbutton).click();
+
+    cy.get(pgObj.loginassertion,{timeout:2000}) 
+    .then(($el)=> {
+            if($el.length > 0)
+                {
+                    console.log("element found");
+                    DeleteUser();
+                }
+            else {
+                console.log("element not found");
+            }
+    })
+}
+
 export const FelSignupUser = ()=>{
     cy.get(pgObj.signup).contains(' Signup / Login').click();
         cy.get(pgObj.name).type('jenny');
